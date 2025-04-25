@@ -1,0 +1,6 @@
+Usando nodemailer crear un generador de spam
+
+Opciones extra:
+
+ - Leer csv/xlsx
+ - Generar log con aciertos y fallos
