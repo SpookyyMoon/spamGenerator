@@ -1,6 +1,10 @@
 //Import nodemailer
 const nodemailer = require("nodemailer");
 
+
+//Array temporal almacena correos
+let spamLista = ['wiwelav972@astimei.com'];
+
 //Configuracion de nodemailer usando mailtrap
 var transport = nodemailer.createTransport({
     host: "sandbox.smtp.mailtrap.io",
@@ -13,26 +17,40 @@ var transport = nodemailer.createTransport({
 //Configuracion de correo
 var mailOptions = {
     from: 'janedoe@gmail.com',
-    to: 'johndoe@gmail.com',
+    to: spamLista,
     subject: 'Asunto',
     text: 'Mensaje'
 };
 
-//Array temporal almacena correos
-let spamLista = ['wiwelav972@astimei.com'];
-
 //Clase y métodos
 class SpamGen{
 
+    //Añade un correo a la lista de spam
     correoAdd(correo){
         spamLista.push(correo);
     }    
 
+    //Muestra la lista actual de spam
     listaMostrar(){
         console.log("Lista actual de spam: \n")
         spamLista.forEach(correo => {
             console.log(" " + correo);
         });
+    }
+
+    //Modifica el remitente del correo
+    remitenteSpamModificar(remitente){
+        mailOptions.from = remitente;
+    }
+
+    //Modifica el asunto del correo
+    asuntoSpamModificar(asunto){
+        mailOptions.subject = asunto;
+    }
+
+    //Modifica el mensaje del correo
+    mensajeSpamModificar(mensaje){
+        mailOptions.text = mensaje;
     }
 
     //Envio de correo

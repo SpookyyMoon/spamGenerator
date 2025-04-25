@@ -70,10 +70,13 @@ function menu(){
             
             switch(opcionNested2){
                 case 1:
+                    remitenteModificar();
                     break;
                 case 2:
+                    asuntoCambiar();
                     break;
                 case 3:
+                    mensajeModificar();
                     break;
                 case 4:
                     return menu();
@@ -113,7 +116,6 @@ function addCorreos(){
             console.log(" === Spam Generator === ")
             console.log("  == Añadir correos ==\n");
             correo = prompt ("Introduce un correo para añadir a la lista de spam: ");
-            console.log(correo);
             if(correo.includes('@')){
                 spamgenInstancia.correoAdd(correo);
                 console.log(`\nCorreo "${correo} añadido correctamente!`);
@@ -152,6 +154,71 @@ function mostrarLista(){
         return menu();
     }
 
+}
+
+function remitenteModificar(){
+    console.clear();
+    console.log("  === Spam Generator === ");
+    console.log(" == Modificar remitente ==\n");
+
+    let opcion = prompt("¿Quieres cambiar el remitente del spam? [S/N]: ")
+    if (opcion == "S" || opcion == "s"){
+        let remitente = prompt("Introduce el correo del nuevo remitente: ");
+        if(remitente.includes('@')){
+            spamgenInstancia.remitenteSpamModificar(remitente);
+            console.log(`\nSe ha cambiado el remitente correctamente! Nuevo remitente: ${remitente}`);
+            prompt("\nPulsa enter para volver...");
+            return menu();
+        }
+        else{
+            console.log("\nHas introducido un correo inválido! (El formato debe ser correo@proveedor.dominio)");
+        }
+    }
+    else{
+        console.log("Volviendo...")
+        await();
+        return menu();
+    }
+}
+
+function asuntoCambiar(){
+    console.clear();
+    console.log(" === Spam Generator === ");
+    console.log(" == Modificar asunto ==\n");
+
+    let opcion = prompt("¿Quieres cambiar el asunto del spam? [S/N]: \n")
+    if (opcion == "S" || opcion == "s"){
+        let asunto = prompt("Introduce el nuevo asunto: ");
+        spamgenInstancia.asuntoSpamModificar(asunto);
+        console.log(`\nSe ha cambiado el asunto correctamente! Nuevo asunto: ${asunto}`);
+        prompt("\nPulsa enter para volver...");
+        return menu();
+    }
+    else{
+        console.log("Volviendo...")
+        await();
+        return menu();
+    }
+}
+
+function mensajeModificar(){
+    console.clear();
+    console.log(" === Spam Generator === ");
+    console.log(" == Modificar asunto ==\n");
+
+    let opcion = prompt("¿Quieres cambiar el mensaje del spam? [S/N]: ")
+    if (opcion == "S" || opcion == "s"){
+        let mensaje = prompt("Introduce el nuevo mensaje: ");
+        spamgenInstancia.mensajeSpamModificar(mensaje);
+        console.log(`\nSe ha cambiado el mensaje correctamente! Nuevo mensaje: ${mensaje}`);
+        prompt("Pulsa enter para volver...");
+        return menu();
+    }
+    else{
+        console.log("Volviendo...")
+        await();
+        return menu();
+    }
 }
 
 function await(){
