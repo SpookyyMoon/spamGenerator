@@ -40,7 +40,7 @@ p{
     margin: 0.7em;
     width: 30%;
     border-radius: 1em;
-    background-color: #f0faf9;
+    background-color: rgba(204, 219, 218, 0.74);
     width: 30%;
 }
 
@@ -57,7 +57,7 @@ p{
 #opcion1, #opcion2, #opcion3{
     display: flex;
     flex-direction: column;
-    margin-left: 25%;
+    margin-left: 22%;
     margin-top: 2em;
     background-color: #3ca194;
     border-radius: 1em;
@@ -66,4 +66,45 @@ p{
     text-align: center;
     justify-content: center;
     color: white;
+}
+
+/*Contenido*/
+
+#contenido{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 2em;
+}
+
+#textoAdvertencia{
+    margin: 3em;
+    background-color: orange;
+    border-radius: 1em;
+    padding: 1em;
+    display: flex;
+}
+
+#iconoAlerta{
+    height: 4em;
+    align-self: center;
+    margin-right: 1em;
+}
+
+#credito{
+    margin-top: 1em;
+}
+
+#textoCredito{
+    font-size: 0.6em;
+}
+
+#imagenGit{
+    height: 1.2em;
+    width: 1em
+}
+
+#contenido a{
+    width: 1em;
 }
