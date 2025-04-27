@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spam Generator</title>
     <link rel="stylesheet" href="../style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -32,24 +33,25 @@
             <form>
                 <p class="formularioCorreo">
                     Remitente:
-                    <input type="text">
+                    <input name="remitente" type="text">
                 </p>
                 <p class="formularioCorreo">
                     Destinatario:
-                    <input type="text">
+                    <input name="destinatario" type="text">
                 </p>
                 <p class="formularioCorreo">
                     Asunto:
-                    <input type="text">
+                    <input name="asunto" type="text">
                 </p>
                 <p class="formularioCorreo">
                     Mensaje:
-                    <textarea type="text">
+                    <textarea name="mensaje" type="text">
                     </textarea>
                 </p>
             </form>
             <p id="textoCredito">by SpookyyMoon</p>
             <a href="https://github.com/SpookyyMoon/"><img id="imagenGit" src="../public/icons/github.svg"></a>
         </div>
+        <script src="../script/script.js"></script>
 </body>
 </html>
