@@ -35,7 +35,7 @@ input{
 textarea{
     border-radius: 0.4em;
     border: solid 0.1em #3ca194;
-    height: 10em;
+    height: 8em;
     width: 50em;
     padding: 1em;
 }
@@ -68,6 +68,11 @@ textarea{
     font-size: 1.5em;
     margin-top: 25%;
     margin-bottom: 2em;
+}
+
+#logo a{
+    text-decoration: none;
+    color: #84bbba;
 }
 
 .opcion{
@@ -146,5 +151,21 @@ textarea{
     display: flex;
     flex-direction: column;
     row-gap: 0.5em;
-    margin-bottom: 2em;
+    margin-bottom: 1em;
+}
+
+.guardarDatos{
+    width: 13em;
+    margin-bottom: 1em;
+    align-self: flex-end;
+    color: white;
+    background-color: #3ca194;
+    border-radius: 0.5em;
+    border: white;
+    height: 3em;
+}
+
+.guardarDatos:hover{
+    transform: translateY(-0.3em);
+    box-shadow: 0 0.3em 0.3em rgba(0, 0, 0, 0.3);
 }

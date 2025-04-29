@@ -14,7 +14,7 @@
 <body>
     <div id="contenedor">
         <div id="menu">
-            <p id="logo">SPAM GEN</p>
+            <p id="logo"><a href="../index.html">SPAM GEN</a></p>
             <div class="opcion">
                 <a href="../pages/correoConfigurar.html"><p>Configurar Correo</p></a>
                 <img id="configuracionCorreo">
@@ -30,14 +30,14 @@
         </div>
         <div id="contenido">
             <p id="titulo">Configuración de correo:</p>
-            <form>
+            <form method="post" action="/configuracionCorreo"> <!-- Envio de datos a la ruta de Express.js-->
                 <p class="formularioCorreo">
                     Remitente:
-                    <input name="remitente" type="text">
+                    <input name="remitente" type="text" placeholder="ejemplo@gmail.com">
                 </p>
                 <p class="formularioCorreo">
                     Destinatario:
-                    <input name="destinatario" type="text">
+                    <input name="destinatario" type="text" placeholder="ejemplo@gmail.com">
                 </p>
                 <p class="formularioCorreo">
                     Asunto:
@@ -48,10 +48,12 @@
                     <textarea name="mensaje" type="text">
                     </textarea>
                 </p>
+                <button id="guardarCorreo" type="submit" class="guardarDatos">
+                    Guardar configuración
+                </button>
             </form>
             <p id="textoCredito">by SpookyyMoon</p>
             <a href="https://github.com/SpookyyMoon/"><img id="imagenGit" src="../public/icons/github.svg"></a>
         </div>
-        <script src="../script/script.js"></script>
 </body>
 </html>
