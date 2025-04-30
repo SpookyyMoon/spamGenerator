@@ -28,7 +28,17 @@
             </div>
         </div>
         <div id="contenido">
-            <h1>EN PROCESO</h1>
+            <p id="titulo">Enviar correos:</p>
+            <p id="textoExplicativo">Los correos se enviarán usando la configuración generada a traves de <a href="./correoConfigurar.html">Configurar correo</a>, haz click en el botón o en el texto resaltado para cambiarla.</p>
+            <form method="post" action="/enviarCorreos"> <!-- Envio de datos a la ruta de Express.js-->
+                <p class="formularioCorreo">
+                    Cantidad:
+                    <input name="cantidadCorreos" type="number" min="1" max="10" placeholder="1-10">
+                </p>
+                <button id="guardarCorreo" type="submit" class="guardarDatos">
+                    Enviar correos
+                </button>
+            </form>
             <p id="textoCredito">by SpookyyMoon</p>
             <a href="https://github.com/SpookyyMoon/"><img id="imagenGit" src="../icons/github.svg"></a>
         </div>
