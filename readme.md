@@ -49,12 +49,12 @@ npm install express
 ### Configurar el transport en servidor.js en función del proveedor empleado:
 
 ```
-        host: "",
-        port: ,
-        auth: {
-            user: "",
-            pass: ""
-        }
+host: "",
+port: ,
+auth: {
+    user: "",
+    pass: ""
+}
 ```
 
 ### Iniciar el servidor:
