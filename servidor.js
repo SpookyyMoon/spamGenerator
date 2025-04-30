@@ -45,8 +45,8 @@ app.post("/enviarCorreos", (req, res) => {
         host: "sandbox.smtp.mailtrap.io",
         port: 2525,
         auth: {
-        user: "401d0fae5fe213",
-        pass: "b4c1777447ac9f"
+            user: "401d0fae5fe213",
+            pass: "b4c1777447ac9f"
         }
     });
 
