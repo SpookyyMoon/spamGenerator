@@ -30,15 +30,20 @@
         </div>
         <div id="contenido">
             <p id="titulo">Configuración de correo:</p>
-            <form method="post" action="/configuracionCorreo"> <!-- Envio de datos a la ruta de Express.js-->
+            <form method="post" action="/configuracionCorreo" enctype="multipart/form-data"> <!-- Envio de datos a la ruta de Express.js-->
                 <p class="formularioCorreo">
                     Remitente:
                     <input name="remitente" type="text" placeholder="ejemplo@gmail.com">
                 </p>
-                <p class="formularioCorreo">
-                    Destinatario:
-                    <input name="destinatario" type="text" placeholder="ejemplo@gmail.com">
-                </p>
+                <div id="destinatarios">
+                    <p class="formularioCorreo">
+                        Destinatario:
+                        <input name="destinatario" type="text" placeholder="ejemplo@gmail.com">
+                    </p>
+                    <p>
+                        <input type="file" accept=".xlsx" id="importarXLSX" name="listaCorreos">
+                    </p>
+                </div>
                 <p class="formularioCorreo">
                     Asunto:
                     <input name="asunto" type="text">
