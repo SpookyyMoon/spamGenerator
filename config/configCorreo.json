@@ -1,6 +1,16 @@
 {
-  "remitente": "aaa",
-  "destinatario": "aaaa",
-  "asunto": "aaaa",
-  "mensaje": "                    aaaaa"
+  "remitente": "test@ejemplo.com",
+  "destinatario": [
+    [
+      "pepito@gmail.com"
+    ],
+    [
+      "juanito@gmail.com"
+    ],
+    [
+      "janedoe@gmail.com"
+    ]
+  ],
+  "asunto": "Test",
+  "mensaje": "Test"
 }

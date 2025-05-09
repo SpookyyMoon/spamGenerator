@@ -36,7 +36,7 @@ app.post("/configuracionCorreo", upload.single("listaCorreos"), (req, res) => {
         // Obtiene la primera hoja
         var hojaCorreos = workbook.Sheets[workbook.SheetNames[0]];
         // Convierte a JSON
-        correosJSON = xlsx.utils.sheet_to_json(hojaCorreos);
+        correosJSON = xlsx.utils.sheet_to_json(hojaCorreos, { header: 1 });
         correosJSON.forEach(correo => {
             destinatarioLista.push(correo);
         });
