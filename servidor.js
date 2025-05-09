@@ -67,11 +67,11 @@ app.post("/enviarCorreos", (req, res) => {
 
     //Configuracion de nodemailer usando mailtrap
     var transport = nodemailer.createTransport({
-        host: "sandbox.smtp.mailtrap.io",
-        port: 2525,
+        host: "",
+        port: ,
         auth: {
-            user: "401d0fae5fe213",
-            pass: "b4c1777447ac9f"
+            user: "",
+            pass: ""
         }
     });
 
