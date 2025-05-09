@@ -7,13 +7,13 @@ Proyecto para la asignatura de programación consistente en en un generador de c
 - Configurar y guardar los detalles del correo (remitente, destinatario, asunto, mensaje) en un archivo JSON.
 - Seleccionar la cantidad de correos a enviar (de 1 a 10).
 - Enviar correos masivos utilizando Nodemailer con Node.js y Express.js.
+- Importar una lista de correos en formato XLSX para enviar correos a varios destinatarios.
 
 ## Mejoras pendientes:
 
 - Guardado de logs en txt
 - Control de errores en la lógica
 - Regex check de correos
-- Importar correos desde .csv o .xlsx
 - Gestión de prefabs de Spam
 
 ## Tecnologías Utilizadas:
@@ -22,6 +22,7 @@ Proyecto para la asignatura de programación consistente en en un generador de c
 - Node.js
 - Express.js
 - Nodemailer
+- XLSX(Node)
 
 ### Frontend:
 - HTML5
@@ -66,3 +67,9 @@ node ./servidor.js
 ### Abrir en el navegador:
 
 Ir a http://localhost:3000 o hacer Control + click izquierdo en el enlace de la terminal.
+
+### XLSX con lista de correos:
+
+Debe usarse un excel plano conteniendo los correos en orden descendiente en la primera columna y desde la primera celda.
+
+![alt text](image.png)
